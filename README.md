@@ -1,6 +1,6 @@
 # CovidGenie
-
-Step 1 : npm install -g expo-cli 
-Step 2 : cd into the folder
-Step 3 : npm start
+Open your Commed prompt and follow the steps
+Step 1 : ```npm install -g expo-cli```  <br/>
+Step 2 : ```cd into the folder```       <br/>
+Step 3 : ```npm start```                <br/>
 
