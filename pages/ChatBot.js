@@ -25,25 +25,60 @@ class ChatBot extends Component {
       messages: GiftedChat.append(previousState.messages, messages)
     }));
     switch(messages[0].text) {
- 
+        case 'Hi':
+            this.sendBotResponse("Aloha");
+            break;
+
+        case 'Hello':
+            this.sendBotResponse("Aloha");
+            break;
+
         case 'What is COVID?':
-          this.sendBotResponse("COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.");
-          break;
-        
+            this.sendBotResponse("COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.");
+            break;
+
+        case 'What is covid?':
+            this.sendBotResponse("COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.");
+            break;
+
+        case 'What is COVID-19?':
+            this.sendBotResponse("COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.");
+            break;
+
         case 'How can I prevent it?':
             this.sendBotResponse("Handwashing is one of the best ways to protect yourself and your family from getting sick, Wear Mask, and stand 6 ft apart.");
-          break;
+            break;
+
+        case 'How can I prevent COVID?':
+            this.sendBotResponse("Handwashing is one of the best ways to protect yourself and your family from getting sick, Wear Mask, and stand 6 ft apart.");
+            break;
+
+        case 'How can I prevent it covid?':
+            this.sendBotResponse("Handwashing is one of the best ways to protect yourself and your family from getting sick, Wear Mask, and stand 6 ft apart.");
+            break;
+
+        case 'How can I prevent COVID-19?':
+            this.sendBotResponse("Handwashing is one of the best ways to protect yourself and your family from getting sick, Wear Mask, and stand 6 ft apart.");
+            break;
+
+        case 'What is COVID Genie?':
+            this.sendBotResponse("I am a chatbot app designed to inform people about the COVID-19 pandemic.");
+            break;
+
+        case 'What is covid genie?':
+            this.sendBotResponse("I am a chatbot app designed to inform people about the COVID-19 pandemic.");
+            break;
 
         case 'Hi':
             this.sendBotResponse("Aloha");
-          break;
+            break;
    
         default:
             if(messages[0].text.slice(-1) == "?"){
-            this.sendBotResponse("I don't have a answer for that right now, Please ask another quesiton or submit a Feedback so we can found the answer for you.");
+            this.sendBotResponse("I don't have a answer for that right now, Please ask another quesiton or submit feedback so we can find the answer for you.");
             }else{
             this.sendBotResponse("Not sure is that a question, try adding ? to the end.");
-            }
+            }   
         }
   }
 
