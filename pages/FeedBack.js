@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 import { useForm } from "react-hook-form";
-import { Text, View, TextInput, Button, Pressable, StyleSheet, Modal, } from 'react-native';
+import { Text, View, TextInput, Button, StyleSheet, } from 'react-native';
 
 export default function Feedback() {
   const { register, handleSubmit, reset, setValue } = useForm();
@@ -8,7 +8,6 @@ export default function Feedback() {
     reset({ email: '' });
     reset({ problem: '' });
     reset({ description: '' });
-    console.log(formData);
     alert('Forms Have Be Sent');
 
   }, []);
@@ -27,11 +26,11 @@ export default function Feedback() {
 
   return (
       <View style={styles.centeredView}>
-        <Text style={{ alignItems: 'center', fontSize: 45, marginTop: 125, fontWeight: '500' }}>Feedback</Text>
+        <Text style={{ alignItems: 'center', fontSize: 45, marginTop: 25, fontWeight: '500' }}>Feedback</Text>
         <Text style={{ alignItems: 'center', fontSize: 16, marginTop: 20, fontWeight: '400' }}>Email</Text>
         <TextInput
             {...register("email", { required: false })}
-            style={{ alignItems: 'center', borderWidth: 1, borderRadius: 5, width: 300, height: 30}}
+            style={{ alignItems: 'center', borderWidth: 1, borderRadius: 5, width: 300, height: 50}}
             autoCompleteType="email"
             keyboardType="email-address"
             textContentType="emailAddress"
@@ -41,22 +40,15 @@ export default function Feedback() {
         <Text style={{ alignItems: 'center', fontSize: 16, marginTop: 20, fontWeight: '400' }}>Problem</Text>
         <TextInput
             {...register("problem", { required: false })}
-            style={{ alignItems: 'center', borderWidth: 1, borderRadius: 5, width: 300, height: 30}}
-            autoCompleteType="problem"
-            keyboardType="problem"
-            textContentType="problem"
+            style={{ alignItems: 'center', borderWidth: 1, borderRadius: 5, width: 300, height: 50}}
             placeholder="Problem"
             onChangeText={onChangeField('problem')}
         />
         <Text style={{ alignItems: 'center', fontSize: 16, marginTop: 20, fontWeight: '400' }}>Description</Text>
         <TextInput
             {...register("description", { required: false })}
-            multiline
-            numberOfLines={4}
-            style={{ alignItems: 'center', borderWidth: 1, borderRadius: 5, width: 300, height:100, marginBottom: 30 }}
-            autoCompleteType="description"
-            keyboardType="description"
-            textContentType="description"
+            multline
+            style={{ alignItems: 'center', borderWidth: 1, borderRadius: 5, width: 300, height:50, marginBottom: 30 }}
             placeholder="Description"
             onChangeText={onChangeField('description')}
         />
